@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get a Quote | NB Enterprises</title>
+    <meta name="description" content="Send your tube bending tooling requirement to NB Enterprises. Attach your drawing or specification and our team will get back to you within 1-2 business days.">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="header">
+        <div class="container nav-container">
+                        <a href="index.html" class="logo">
+                <span class="logo-n">N</span>
+                <div class="logo-icon-wrapper">
+                    <!-- SVG Pipe/Tube with Droplet -->
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 0v12a6 6 0 006 6h10" stroke="var(--primary-color)" stroke-width="4" fill="none" />
+                        <path d="M10 22 C10 23.1 9.1 24 8 24 C6.9 24 6 23.1 6 22 C6 20.5 8 18 8 18 C8 18 10 20.5 10 22 Z" fill="var(--secondary-color)"/>
+                    </svg>
+                </div>
+                <span class="logo-b">B</span>
+                <div class="logo-text-wrapper">
+                    <span class="logo-text-main">Enterprises</span>
+                    <span class="logo-text-sub">Precision Tooling</span>
+                </div>
+            </a>
+
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="products.html">Products</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="enquiry.html" class="active">Enquiry</a>
+                <a href="contact.html">Contact Us</a>
+            </nav>
+
+            <button class="hamburger">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Page Hero Banner -->
+    <section class="hero hero-inner">
+        <div class="hero-placeholder-bg" style="background-image: url('https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?w=1600'); background-size: cover; background-position: center;"></div>
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content animate-fade-in">
+                <h1>Get a Quote</h1>
+                <p>Fill in the form below with your requirement. You can attach your drawing or specification file and we will get back to you shortly.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enquiry Form Section -->
+    <section class="section-padding bg-off-white">
+        <div class="container">
+            <div class="enquiry-form">
+                
+                <div class="form-success" id="form-success">
+                    Thank you! We have received your enquiry and will contact you within 1-2 business days.
+                </div>
+
+                <form id="quote-form" action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data" novalidate>
+                    
+                    <!-- Web3Forms Hidden Input -->
+                    <!-- TODO: Register at web3forms.com with email nbenterprises807@gmail.com to get your access key. Replace YOUR_WEB3FORMS_KEY with the real key. -->
+                    <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_KEY">
+                    
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" required>
+                        <div class="form-error" id="name-error">Please enter your full name.</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="company">Company Name *</label>
+                        <input type="text" id="company" name="company" required>
+                        <div class="form-error" id="company-error">Please enter your company name.</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+91 XXXXX XXXXX" required>
+                        <div class="form-error" id="phone-error">Please enter a valid phone number.</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                        <div class="form-error" id="email-error">Please enter a valid email address.</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="product">Product Interested In *</label>
+                        <select id="product" name="product" required>
+                            <option value="" disabled selected>Select a Product</option>
+                            <option value="Tube Bending Die">Tube Bending Die</option>
+                            <option value="Mandrel">Mandrel</option>
+                            <option value="Clamping Die">Clamping Die</option>
+                            <option value="Wiper Shoe">Wiper Shoe</option>
+                            <option value="Pressure Die">Pressure Die</option>
+                            <option value="Collet">Collet</option>
+                            <option value="Bend Die Insert">Bend Die Insert</option>
+                            <option value="Other / General Enquiry">Other / General Enquiry</option>
+                        </select>
+                        <div class="form-error" id="product-error">Please select a product.</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="specs">Tube Size / Specification (Optional)</label>
+                        <input type="text" id="specs" name="specs" placeholder="e.g. OD 25mm, Wall 1.5mm, Radius 50mm">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message / Requirement Details *</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                        <div class="form-error" id="message-error">Please provide details about your requirement.</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="attachment">Attach Drawing / Spec File (PDF, DWG, DXF, JPG, PNG — Max 10MB)</label>
+                        <input type="file" id="attachment" name="attachment" accept=".pdf,.dwg,.dxf,.jpg,.jpeg,.png">
+                        <div class="form-error" id="attachment-error">File size must be less than 10MB.</div>
+                    </div>
+
+                    <!-- Honeypot Spam Protection -->
+                    <input type="checkbox" name="botcheck" class="botcheck hidden">
+
+                    <div class="form-group form-submit-group">
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Send Enquiry</button>
+                    </div>
+
+                    <div class="form-error form-error-general" id="form-error-general">
+                        Something went wrong. Please try again or contact us directly at nbenterprises807@gmail.com
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                                        <div class="footer-logo logo">
+                        <span class="logo-n">N</span>
+                        <div class="logo-icon-wrapper">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4 0v12a6 6 0 006 6h10" stroke="var(--primary-color)" stroke-width="4" fill="none" />
+                                <path d="M10 22 C10 23.1 9.1 24 8 24 C6.9 24 6 23.1 6 22 C6 20.5 8 18 8 18 C8 18 10 20.5 10 22 Z" fill="var(--bg-white)"/>
+                            </svg>
+                        </div>
+                        <span class="logo-b">B</span>
+                        <div class="logo-text-wrapper">
+                            <span class="logo-text-main">Enterprises</span>
+                            <span class="logo-text-sub" style="color: #BBBBBB;">Precision Tooling</span>
+                        </div>
+                    </div>
+                        <span class="logo-b">B</span>
+                        <div class="logo-text-wrapper">
+                            <span class="logo-text-main">Enterprises</span>
+                            <span class="logo-text-sub" style="color: #BBBBBB;">Precision Tooling</span>
+                        </div>
+                    </div>
+                    <p>NB Enterprises is a trusted manufacturer of precision tube bending tooling, providing high-quality dies and mandrels to industries across India.</p>
+                </div>
+                
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="enquiry.html">Enquiry</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4>Contact Information</h4>
+                    <ul class="footer-contact">
+                        <li>
+                            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            Sector No. 10, Plot No. 209, PCNTDA, MIDC, Bhosari, Pune - 411026
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            <a href="tel:+919096907770">+91 90969 07770</a>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                            <a href="mailto:nbenterprises807@gmail.com">nbenterprises807@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                &copy; 2026 NB Enterprises. All Rights Reserved. | GST No.: 27BOAPM7533R1ZA
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/919096907770" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+    </a>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/form-validation.js"></script>
+</body>
+</html>
